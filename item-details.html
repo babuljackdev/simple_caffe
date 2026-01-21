@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Café - Item Details</title>
+    <link rel="stylesheet" href="premium.css">
+    <link rel="stylesheet" href="item-details.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Simple Café</a>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 id="itemTitle">Item Details</h1>
+            <p id="itemCategory">Category</p>
+        </div>
+    </header>
+
+    <section class="item-details-section">
+        <div class="container">
+            <div class="item-details-container">
+                <div class="item-gallery">
+                    <div class="main-image">
+                        <img id="mainImage" src="" alt="Main Item Image">
+                    </div>
+                    <div class="thumbnail-gallery" id="thumbnailGallery">
+                        <!-- Thumbnails will be dynamically added -->
+                    </div>
+                </div>
+
+                <div class="item-info">
+                    <div class="item-header-details">
+                        <h2 id="itemName">Item Name</h2>
+                        <span class="price-large" id="itemPrice">$0.00</span>
+                    </div>
+                    
+                    <div class="item-description">
+                        <h3>Description</h3>
+                        <p id="itemDescription">Item description goes here.</p>
+                    </div>
+
+                    <div class="item-details">
+                        <h3>Details</h3>
+                        <ul id="itemDetailsList">
+                            <!-- Details will be dynamically added -->
+                        </ul>
+                    </div>
+
+                    <div class="item-nutrition">
+                        <h3>Nutrition Information</h3>
+                        <div class="nutrition-grid">
+                            <div class="nutrition-item">
+                                <span class="nutrition-value" id="calories">0</span>
+                                <span class="nutrition-label">Calories</span>
+                            </div>
+                            <div class="nutrition-item">
+                                <span class="nutrition-value" id="protein">0g</span>
+                                <span class="nutrition-label">Protein</span>
+                            </div>
+                            <div class="nutrition-item">
+                                <span class="nutrition-value" id="carbs">0g</span>
+                                <span class="nutrition-label">Carbs</span>
+                            </div>
+                            <div class="nutrition-item">
+                                <span class="nutrition-value" id="fat">0g</span>
+                                <span class="nutrition-label">Fat</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-actions">
+                        <a href="menu.html" class="btn btn-primary">Back to Menu</a>
+                    </div>
+
+                    <div class="item-tags" id="itemTags">
+                        <!-- Tags will be dynamically added -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-items">
+        <div class="container">
+            <h2>You Might Also Like</h2>
+            <div class="related-grid" id="relatedItems">
+                <!-- Related items will be dynamically added -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Simple Café</h3>
+                    <p>Your neighborhood café for great coffee and food. Experience the perfect blend of taste and comfort.</p>
+                    <div class="footer-contact">
+                        <p>📍 123 Coffee Street</p>
+                        <p>📞 +1 (234) 567-890</p>
+                        <p>✉️ info@simplecafe.com</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Opening Hours</h3>
+                    <ul>
+                        <li>Monday - Friday: 7:00 AM - 8:00 PM</li>
+                        <li>Saturday - Sunday: 8:00 AM - 9:00 PM</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Simple Café. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="item-details.js"></script>
+</body>
+</html>

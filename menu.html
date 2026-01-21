@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Café - Menu</title>
+    <link rel="stylesheet" href="premium.css">
+    <link rel="stylesheet" href="menu-premium.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Simple Café</a>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-header-title">Our Menu</h1>
+                <p class="page-header-subtitle">Discover our delicious offerings</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Tabs -->
+    <section class="menu-tabs-section">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">All Items</button>
+                <button class="category-tab" data-category="breakfast">🌅 Breakfast</button>
+                <button class="category-tab" data-category="lunch">🍽️ Lunch</button>
+                <button class="category-tab" data-category="drinks">☕ Drinks</button>
+                <button class="category-tab" data-category="desserts">🍰 Desserts</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Grid -->
+    <section class="menu-content-section">
+        <div class="container">
+            <div class="menu-grid" id="menuGrid">
+                <!-- Breakfast Items -->
+                <div class="menu-item card-3d" data-category="breakfast" data-id="classic-breakfast">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600&h=400&fit=crop" alt="Classic Breakfast">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Breakfast</span>
+                        <h3>Classic Breakfast</h3>
+                        <p>Two eggs, bacon, toast, and hash browns</p>
+                        <span class="menu-price">$8.99</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="breakfast" data-id="avocado-toast">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=600&h=400&fit=crop" alt="Avocado Toast">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Breakfast</span>
+                        <h3>Avocado Toast</h3>
+                        <p>Fresh avocado on sourdough with poached egg</p>
+                        <span class="menu-price">$7.99</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="breakfast" data-id="pancakes">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=400&fit=crop" alt="Pancakes">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Breakfast</span>
+                        <h3>Pancakes</h3>
+                        <p>Fluffy pancakes with maple syrup and butter</p>
+                        <span class="menu-price">$6.99</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="breakfast" data-id="breakfast-burrito">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&h=400&fit=crop" alt="Breakfast Burrito">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Breakfast</span>
+                        <h3>Breakfast Burrito</h3>
+                        <p>Scrambled eggs, cheese, and veggies in a tortilla</p>
+                        <span class="menu-price">$8.49</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="breakfast" data-id="oatmeal-bowl">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1517673400267-0251440c45dc?w=600&h=400&fit=crop" alt="Oatmeal Bowl">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Breakfast</span>
+                        <h3>Oatmeal Bowl</h3>
+                        <p>Warm oatmeal with fresh berries and honey</p>
+                        <span class="menu-price">$5.99</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="breakfast" data-id="french-toast">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=600&h=400&fit=crop" alt="French Toast">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Breakfast</span>
+                        <h3>French Toast</h3>
+                        <p>Classic French toast with cinnamon and powdered sugar</p>
+                        <span class="menu-price">$7.49</span>
+                    </div>
+                </div>
+                <!-- Lunch Items -->
+                <div class="menu-item card-3d" data-category="lunch" data-id="grilled-chicken-sandwich">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?w=600&h=400&fit=crop" alt="Grilled Chicken Sandwich">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Lunch</span>
+                        <h3>Grilled Chicken Sandwich</h3>
+                        <p>Grilled chicken breast with lettuce, tomato, and mayo</p>
+                        <span class="menu-price">$9.99</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="lunch" data-id="caesar-salad">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?w=600&h=400&fit=crop" alt="Caesar Salad">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Lunch</span>
+                        <h3>Caesar Salad</h3>
+                        <p>Romaine lettuce, parmesan, croutons, and Caesar dressing</p>
+                        <span class="menu-price">$8.49</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="lunch" data-id="club-sandwich">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=600&h=400&fit=crop" alt="Club Sandwich">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Lunch</span>
+                        <h3>Club Sandwich</h3>
+                        <p>Triple-decker with turkey, bacon, and cheese</p>
+                        <span class="menu-price">$10.99</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="lunch" data-id="veggie-wrap">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&h=400&fit=crop" alt="Veggie Wrap">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Lunch</span>
+                        <h3>Veggie Wrap</h3>
+                        <p>Grilled vegetables, hummus, and fresh greens</p>
+                        <span class="menu-price">$8.99</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="lunch" data-id="tomato-soup">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&h=400&fit=crop" alt="Tomato Soup">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Lunch</span>
+                        <h3>Tomato Soup</h3>
+                        <p>Creamy tomato soup with grilled cheese on the side</p>
+                        <span class="menu-price">$5.99</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="lunch" data-id="quinoa-bowl">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop" alt="Quinoa Bowl">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Lunch</span>
+                        <h3>Quinoa Bowl</h3>
+                        <p>Quinoa with roasted vegetables and tahini dressing</p>
+                        <span class="menu-price">$9.49</span>
+                    </div>
+                </div>
+                <!-- Drinks Items -->
+                <div class="menu-item card-3d" data-category="drinks" data-id="espresso">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=600&h=400&fit=crop" alt="Espresso">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Drinks</span>
+                        <h3>Espresso</h3>
+                        <p>Single shot of rich espresso</p>
+                        <span class="menu-price">$2.99</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="drinks" data-id="americano">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&h=400&fit=crop" alt="Americano">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Drinks</span>
+                        <h3>Americano</h3>
+                        <p>Espresso with hot water</p>
+                        <span class="menu-price">$3.49</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="drinks" data-id="cappuccino">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&h=400&fit=crop" alt="Cappuccino">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Drinks</span>
+                        <h3>Cappuccino</h3>
+                        <p>Espresso with steamed milk and foam</p>
+                        <span class="menu-price">$4.49</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="drinks" data-id="latte">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&h=400&fit=crop" alt="Latte">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Drinks</span>
+                        <h3>Latte</h3>
+                        <p>Espresso with steamed milk and light foam</p>
+                        <span class="menu-price">$4.49</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="drinks" data-id="mocha">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=600&h=400&fit=crop" alt="Mocha">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Drinks</span>
+                        <h3>Mocha</h3>
+                        <p>Espresso, chocolate, and steamed milk</p>
+                        <span class="menu-price">$4.99</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="drinks" data-id="iced-coffee">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=600&h=400&fit=crop" alt="Iced Coffee">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Drinks</span>
+                        <h3>Iced Coffee</h3>
+                        <p>Cold-brewed coffee over ice</p>
+                        <span class="menu-price">$3.99</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="drinks" data-id="green-tea">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?w=600&h=400&fit=crop" alt="Green Tea">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Drinks</span>
+                        <h3>Green Tea</h3>
+                        <p>Hot green tea with lemon</p>
+                        <span class="menu-price">$2.99</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="drinks" data-id="fresh-juice">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=600&h=400&fit=crop" alt="Fresh Juice">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Drinks</span>
+                        <h3>Fresh Juice</h3>
+                        <p>Freshly squeezed orange or apple juice</p>
+                        <span class="menu-price">$4.49</span>
+                    </div>
+                </div>
+                <!-- Desserts Items -->
+                <div class="menu-item card-3d" data-category="desserts" data-id="chocolate-cake">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&h=400&fit=crop" alt="Chocolate Cake">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Desserts</span>
+                        <h3>Chocolate Cake</h3>
+                        <p>Rich chocolate cake with ganache</p>
+                        <span class="menu-price">$4.99</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="desserts" data-id="cheesecake">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&h=400&fit=crop" alt="Cheesecake">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Desserts</span>
+                        <h3>Cheesecake</h3>
+                        <p>Classic New York cheesecake with berry sauce</p>
+                        <span class="menu-price">$5.49</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="desserts" data-id="apple-pie">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?w=600&h=400&fit=crop" alt="Apple Pie">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Desserts</span>
+                        <h3>Apple Pie</h3>
+                        <p>Warm apple pie with vanilla ice cream</p>
+                        <span class="menu-price">$4.49</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="desserts" data-id="chocolate-croissant">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&h=400&fit=crop" alt="Chocolate Croissant">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Desserts</span>
+                        <h3>Chocolate Croissant</h3>
+                        <p>Buttery pastry filled with Belgian chocolate</p>
+                        <span class="menu-price">$3.49</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="desserts" data-id="blueberry-muffin">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=600&h=400&fit=crop" alt="Blueberry Muffin">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Desserts</span>
+                        <h3>Blueberry Muffin</h3>
+                        <p>Fresh blueberry muffin baked daily</p>
+                        <span class="menu-price">$2.99</span>
+                    </div>
+                </div>
+                <div class="menu-item card-3d" data-category="desserts" data-id="cookie">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600&h=400&fit=crop" alt="Cookie">
+                        <div class="menu-overlay">
+                            <button class="menu-view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <span class="menu-category">Desserts</span>
+                        <h3>Cookie</h3>
+                        <p>Chocolate chip or oatmeal raisin cookie</p>
+                        <span class="menu-price">$1.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Simple Café</h3>
+                    <p>Your neighborhood café for great coffee and food. Experience the perfect blend of taste and comfort.</p>
+                    <div class="footer-contact">
+                        <p>📍 123 Coffee Street</p>
+                        <p>📞 +1 (234) 567-890</p>
+                        <p>✉️ info@simplecafe.com</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Opening Hours</h3>
+                    <ul>
+                        <li>Monday - Friday: 7:00 AM - 8:00 PM</li>
+                        <li>Saturday - Sunday: 8:00 AM - 9:00 PM</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Simple Café. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="menu-premium.js"></script>
+</body>
+</html>
