@@ -281,34 +281,69 @@
     margin-bottom: var(--spacing-lg);
 }
 
-.map-placeholder {
-    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-off-white) 100%);
-    border: 2px solid var(--color-brown-light);
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: var(--spacing-lg);
+    overflow: hidden;
     border-radius: var(--radius-xl);
-    padding: var(--spacing-xl);
+    box-shadow: 
+        0 10px 40px rgba(61, 41, 20, 0.15),
+        0 5px 20px rgba(61, 41, 20, 0.1);
 }
 
-.map-content {
+.map-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+    border: none;
+    transition: transform var(--transition-cinematic);
+}
+
+.map-wrapper:hover iframe {
+    transform: scale(1.02);
+}
+
+.map-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.8) 0%, 
+        rgba(255, 255, 255, 0.95) 100%);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(93, 64, 55, 0.1);
 }
 
-.map-icon {
-    font-size: 4rem;
-    margin-bottom: var(--spacing-sm);
-}
-
-.map-content p {
-    font-size: 1.2rem;
+.map-address {
+    font-size: 1.1rem;
     color: var(--color-text-secondary);
-    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+    text-align: center;
 }
 
-.map-content a.btn-secondary {
-    display: inline-block;
-    width: auto;
+.map-info .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    text-decoration: none;
+    transition: all var(--transition-normal);
+}
+
+.map-info .btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.map-info .btn-secondary svg {
+    transition: transform var(--transition-normal);
+}
+
+.map-info .btn-secondary:hover svg {
+    transform: translateX(3px);
 }
 
 /* CTA Section */
@@ -376,6 +411,10 @@
         padding: var(--spacing-sm) var(--spacing-md);
     }
 
+    .map-wrapper iframe {
+        height: 350px;
+    }
+
     .cta-buttons {
         flex-direction: column;
         width: 100%;
@@ -401,7 +440,16 @@
         font-size: 1.75rem;
     }
 
-    .map-content p {
+    .map-wrapper iframe {
+        height: 280px;
+    }
+
+    .map-address {
         font-size: 1rem;
+    }
+
+    .map-info .btn-secondary {
+        font-size: 0.9rem;
+        padding: var(--spacing-xs) var(--spacing-md);
     }
 }

@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initCategoryTabs();
     initMenuItems();
     init3DTiltEffect();
+    initPremiumCardAnimations();
+    initParallaxEffect();
 });
 
 /* Scroll Animations */
@@ -72,6 +74,68 @@ function initScrollAnimations() {
 
     document.querySelectorAll('.scroll-reveal').forEach(el => {
         observer.observe(el);
+    });
+
+    // Add scroll reveal to menu items
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(40px)';
+        item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        
+        const menuObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    menuObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        menuObserver.observe(item);
+    });
+}
+
+/* Premium Card Animations */
+function initPremiumCardAnimations() {
+    const cards = document.querySelectorAll('.menu-item');
+    
+    cards.forEach(card => {
+        // Add magnetic effect to cards
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const moveX = (x - centerX) / 15;
+            const moveY = (y - centerY) / 15;
+            
+            card.style.transform = `perspective(1200px) rotateX(${(y - centerY) / -25}deg) rotateY(${(x - centerX) / 25}deg) translateZ(30px)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1200px) rotateX(0) rotateY(0) translateZ(0)';
+        });
+    });
+}
+
+/* Parallax Effect for Images */
+function initParallaxEffect() {
+    const images = document.querySelectorAll('.menu-image img');
+    
+    window.addEventListener('scroll', () => {
+        images.forEach(img => {
+            const rect = img.getBoundingClientRect();
+            const scrollPercent = rect.top / window.innerHeight;
+            
+            if (scrollPercent > -1 && scrollPercent < 1) {
+                img.style.transform = `scale(1.15) translateY(${scrollPercent * 20}px)`;
+            }
+        });
     });
 }
 
@@ -162,14 +226,14 @@ function init3DTiltEffect() {
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
             
-            const rotateX = ((y - centerY) / centerY) * -5;
-            const rotateY = ((x - centerX) / centerX) * 5;
+            const rotateX = ((y - centerY) / centerY) * -8;
+            const rotateY = ((x - centerX) / centerX) * 8;
             
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(20px)`;
+            card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(30px)`;
         });
         
         card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+            card.style.transform = 'perspective(1200px) rotateX(0) rotateY(0) translateZ(0)';
         });
     });
 }
@@ -276,5 +340,6 @@ document.querySelectorAll('.btn, .category-tab, .menu-view-btn').forEach(btn => 
 });
 
 /* Console Message */
-console.log('%c🍽️ Menu Page Loaded!', 'background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%); color: white; font-size: 16px; padding: 12px 20px; border-radius: 8px;');
-console.log('%c✨ 3D Cards & Category Switching Active', 'color: #2E7D32; font-size: 14px; font-weight: bold;');
+console.log('%c🍽️ Premium Menu Page Loaded!', 'background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%); color: white; font-size: 16px; padding: 12px 20px; border-radius: 8px;');
+console.log('%c✨ Premium Glassmorphism Cards & Advanced Animations Active', 'color: #2E7D32; font-size: 14px; font-weight: bold;');
+console.log('%c🎨 Enhanced with: 3D Tilt, Parallax, Scroll Reveal & Magnetic Effects', 'color: #666; font-size: 12px;');
